@@ -8,6 +8,7 @@
         id="nombre"
         placeholder="Escribir nombres"
         formControlName="nombre"
+        [ngClass]="{ 'border-red-600': campoNoValido('nombre') }"
       />
       <div>
         <p
@@ -32,6 +33,7 @@
         id="email"
         placeholder="Escribir Email"
         formControlName="email"
+        [ngClass]="{ 'border-red-600': campoNoValido('email') }"
       />
       <div>
         <p
@@ -56,6 +58,7 @@
         rows="3"
         id="mensaje"
         formControlName="mensaje"
+        [ngClass]="{ 'border-red-600': campoNoValido('mensaje') }"
       ></textarea>
       <div>
         <p

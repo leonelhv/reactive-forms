@@ -22,4 +22,10 @@ export class FormReactiveComponent {
   get form(): { [key: string]: AbstractControl } {
     return this.formContact.controls;
   }
+  campoNoValido(campo: string) {
+    return (
+      this.formContact.get(campo)?.invalid &&
+      this.formContact.get(campo)?.touched
+    );
+  }
 }
